@@ -1,104 +1,208 @@
-
-<style>
-.mui-zebra-page{
-    background: #200258 !important;
+.mui-zebra-page {
+  background: #200258 !important;
 }
-    .p-slider-product-list a {
-        text-decoration: none !important;
-    }
+.p-slider-product-list a {
+  text-decoration: none !important;
+}
 
-    .lzd-act-title .inner-content {
-        background-color: #b5076b !important;
-        border-radius: 7px;
-        text-align: center;
-        color: #fff;
-        text-shadow: 2px 2px 2px #6f0943;
-    }
+.lzd-act-title .inner-content {
+  background-color: #b5076b !important;
+  border-radius: 7px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 2px #6f0943;
+}
 
-    .p-slider-product-img img {
-        object-fit: contain !important;
-    }
+.p-slider-product-img img {
+  object-fit: contain !important;
+}
 
-    .p-slider-content {
-        height: 270px;
-    }
+.p-slider-content {
+  height: 270px;
+}
 
-    .p-slider {
-        background: transparent !important;
-    }
+.p-slider {
+  background: transparent !important;
+}
 
-    .lzd-act-title .more {
-        color: #fff;
-        text-shadow: 2px 2px 2px #6f0943;
-    }
+.lzd-act-title .more {
+  color: #fff;
+  text-shadow: 2px 2px 2px #6f0943;
+}
 
-    .lzd-act-partnership-daraz .image {
-        object-fit: contain !important;
-    }
+.lzd-act-partnership-daraz .image {
+  object-fit: contain !important;
+}
 
-    .lzd-act-partnership-daraz .next,
-    .lzd-act-partnership-daraz .pre {
-        background-color: #b5076b !important;
-        box-shadow: 0px 0px 10px 0px #0000006e;
-    }
+.lzd-act-partnership-daraz .next,
+.lzd-act-partnership-daraz .pre {
+  background-color: #b5076b !important;
+  box-shadow: 0px 0px 10px 0px #0000006e;
+}
 
-    .lzd-act-partnership-daraz .shadow-left,
-    .lzd-act-partnership-daraz .shadow-right {
-        display: none !important;
-    }
+.lzd-act-partnership-daraz .shadow-left,
+.lzd-act-partnership-daraz .shadow-right {
+  display: none !important;
+}
 
-    @media(min-width: 768px) {
-        .lzd-act-partnership-daraz .cs-slide {
-            overflow-x: hidden !important;
-        }
+@media (min-width: 768px) {
+  .lzd-act-partnership-daraz .cs-slide {
+    overflow-x: hidden !important;
+  }
 
-        .lzd-act-partnership-daraz .active .arrow-btn.left::after,
-        .lzd-act-partnership-daraz .active .arrow-btn.right::after {
-            border-top: 3px solid #fff !important;
-            border-right: 3px solid #fff !important;
-        }
-    }
+  .lzd-act-partnership-daraz .active .arrow-btn.left::after,
+  .lzd-act-partnership-daraz .active .arrow-btn.right::after {
+    border-top: 3px solid #fff !important;
+    border-right: 3px solid #fff !important;
+  }
+}
 
-    @media(max-width: 767px) {
-        .p-slider-content {
-            height: auto !important;
-        }
+@media (max-width: 767px) {
+  .p-slider-content {
+    height: auto !important;
+  }
 
-        .lzd-act-title {
-            background-color: #b5076b !important;
-            color: #fff;
-            text-align: center;
-            text-shadow: 2px 2px 2px #6f0943;
-        }
+  .lzd-act-title {
+    background-color: #b5076b !important;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 2px #6f0943;
+  }
 
-        .lzd-act-title .more {
-            color: #fff;
-            text-shadow: 2px 2px 2px #6f0943;
-        }
+  .lzd-act-title .more {
+    color: #fff;
+    text-shadow: 2px 2px 2px #6f0943;
+  }
 
-        .p-slider {
-            background: transparent !important;
-        }
+  .p-slider {
+    background: transparent !important;
+  }
 
-        .lzd-act-title {
-            color: #fff;
-            text-shadow: 2px 2px 2px #6f0943;
-        }
+  .lzd-act-title {
+    color: #fff;
+    text-shadow: 2px 2px 2px #6f0943;
+  }
 
-        .pencentage-bar .bar {
-            background-color: #000;
-        }
+  .pencentage-bar .bar {
+    background-color: #000;
+  }
 
-        .pencentage-bar span {
-            background-color: #232323c9 !important;
-        }
+  .pencentage-bar span {
+    background-color: #232323c9 !important;
+  }
 
-        .lzd-act-partnership-daraz .image {
-            object-fit: contain !important;
-        }
+  .lzd-act-partnership-daraz .image {
+    object-fit: contain !important;
+  }
 
-        .daz-scrolling-xbanner .placeHolderControl {
-            background: #0b0b0b;
-        }
-    }
-</style>
+  .daz-scrolling-xbanner .placeHolderControl {
+    background: #0b0b0b;
+  }
+}
+.lzd-act-title .title {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+}
+.lzd-act-navigation-icon-text {
+  font-weight: 501;
+}
+.lzd-act-title {
+  text-align: center;
+}
+.lzd-act-richtext {
+  font-family: "Montserrat", sans-serif !important;
+}
+.lzd-act-title .more {
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif !important;
+}
+.title-bar-content {
+  font-family: "Montserrat", sans-serif !important;
+  text-transform: uppercase;
+}
+.title-bar-link {
+  font-family: "Montserrat", sans-serif !important;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .lzd-act-title .more {
+    font-size: 10px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif !important;
+  }
+  .lzd-act-navigation-icon-text {
+    font-weight: 501;
+  }
+  .lzd-act-title {
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 700;
+    font-size: 17px !important;
+    text-transform: uppercase;
+  }
+}
+@media (min-width: 768px) {
+  .lzd-act-title .inner-content {
+    font-size: 26px !important;
+  }
+}
+@media (max-width: 768px) {
+  .responsive-box.daraz {
+  }
+  .responsive-box.daraz .flex-grid-col3 {
+    width: 103.77% !important;
+  }
+  .lzd-act-product-slot-endless-scroll
+    .responsive-box.daraz
+    .flex-grid-col3
+    .flex-item {
+    width: 49.2% !important;
+    margin: 0 !important;
+    box-shadow: -1px -1px 0px 0px rgba(0, 0, 0, 0.13) !important;
+  }
+  .lzd-act-product-slot-endless-scroll .card-product-desc {
+    top: 10px !important;
+    margin-top: 22px !important;
+  }
+  .lzd-act-product-slot-endless-scroll .card-product-slot-image {
+    margin-top: 14px !important;
+  }
+  .lzd-act-product-slot-endless-scroll .card-product-slot-title {
+    font-size: 14px !important;
+    line-height: 20px !important;
+    margin-top: 0 !important;
+    height: 40px !important;
+    text-align: center !important;
+  }
+  .two-line-clamp {
+    max-height: 40px !important;
+  }
+  .lzd-act-product-slot-endless-scroll .sale-price {
+    font-size: 14px !important;
+    line-height: 15px !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+  .lzd-act-product-slot-endless-scroll .second-line-price {
+    margin: 3.2% auto 0 !important;
+  }
+  .lzd-act-product-slot-endless-scroll .second-line-price .original-price {
+    font-size: 14px !important;
+  }
+  .lzd-act-product-slot-endless-scroll .second-line-price .discount {
+    font-size: 14px !important;
+  }
+  .flex-grid-col3 .J_dynamic_box .product-group .clearfix .placeholder-box {
+    padding: 0 !important;
+  }
+  .lzd-act-product-slot-endless-scroll .li-pagination {
+    height: 0 !important;
+    width: auto !important;
+  }
+  .lzd-act-product-slot-endless-scroll
+    .responsive-box.daraz
+    .flex-grid-col3
+    .flex-item {
+    padding-left: 0 !important;
+  }
+}
