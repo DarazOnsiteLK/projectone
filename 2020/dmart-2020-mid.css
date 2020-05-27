@@ -1,6 +1,12 @@
 .mui-zebra-page {
   background: #200258 !important;
 }
+@media (max-width: 767px) {
+  .lzd-act-title {
+    height: 45px !important;
+    width: 98% !important;
+  }
+}
 .p-slider-product-list a {
   text-decoration: none !important;
 }
