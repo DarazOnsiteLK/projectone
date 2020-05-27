@@ -1,13 +1,15 @@
+
 <style>
     .p-slider-product-list a {
         text-decoration: none !important;
     }
 
     .lzd-act-title .inner-content {
-        background-color: #0b3371 !important;
+        background-color: #b5076b !important;
         border-radius: 7px;
         text-align: center;
         color: #fff;
+        text-shadow: 2px 2px 2px #6f0943;
     }
 
     .p-slider-product-img img {
@@ -24,6 +26,7 @@
 
     .lzd-act-title .more {
         color: #fff;
+        text-shadow: 2px 2px 2px #6f0943;
     }
 
     .lzd-act-partnership-daraz .image {
@@ -32,7 +35,7 @@
 
     .lzd-act-partnership-daraz .next,
     .lzd-act-partnership-daraz .pre {
-        background-color: #855b35 !important;
+        background-color: #b5076b !important;
         box-shadow: 0px 0px 10px 0px #0000006e;
     }
 
@@ -48,8 +51,8 @@
 
         .lzd-act-partnership-daraz .active .arrow-btn.left::after,
         .lzd-act-partnership-daraz .active .arrow-btn.right::after {
-            border-top: 3px solid #000 !important;
-            border-right: 3px solid #000 !important;
+            border-top: 3px solid #fff !important;
+            border-right: 3px solid #fff !important;
         }
     }
 
@@ -59,13 +62,15 @@
         }
 
         .lzd-act-title {
-            background-color: #0b3371 !important;
+            background-color: #b5076b !important;
             color: #fff;
             text-align: center;
+            text-shadow: 2px 2px 2px #6f0943;
         }
 
         .lzd-act-title .more {
             color: #fff;
+            text-shadow: 2px 2px 2px #6f0943;
         }
 
         .p-slider {
@@ -74,6 +79,7 @@
 
         .lzd-act-title {
             color: #fff;
+            text-shadow: 2px 2px 2px #6f0943;
         }
 
         .pencentage-bar .bar {
