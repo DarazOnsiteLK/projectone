@@ -1,5 +1,8 @@
 
 <style>
+.mui-zebra-page{
+    background: #200258 !important;
+}
     .p-slider-product-list a {
         text-decoration: none !important;
     }
