@@ -410,3 +410,28 @@
     font-size: 14px !important;
   }
 }
+.lzd-act-navigation {
+  background-color: rgba(181, 7, 107, 1);
+}
+.lzd-act-navigation-item .lzd-act-navigation-text:hover {
+  color: #f8e71c;
+}
+@media (max-width: 767px) {
+  .lzd-act-navigation-text {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif !important;
+  }
+  .lzd-act-navigation-list .lzd-act-navigation-item-mobile {
+    max-width: 160px !important;
+  }
+}
+@media (min-width: 768px) {
+  .lzd-act-navigation-item .lzd-act-navigation-text {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif !important;
+  }
+}
