@@ -422,6 +422,7 @@
     font-size: 13px;
     font-weight: 600;
     font-family: "Montserrat", sans-serif !important;
+    text-shadow: 2px 2px 2px #6f0943;
   }
   .lzd-act-navigation-list .lzd-act-navigation-item-mobile {
     max-width: 160px !important;
@@ -433,5 +434,6 @@
     font-size: 17px;
     font-weight: 600;
     font-family: "Montserrat", sans-serif !important;
+    text-shadow: 2px 2px 2px #6f0943;
   }
 }
