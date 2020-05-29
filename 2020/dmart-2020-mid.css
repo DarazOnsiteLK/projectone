@@ -6,6 +6,9 @@
     height: 45px !important;
     width: 100% !important;
   }
+  .daz-scrolling-xbanner .container{
+    background: #fff0 !important;
+  }
 }
 .p-slider-product-list a {
   text-decoration: none !important;
