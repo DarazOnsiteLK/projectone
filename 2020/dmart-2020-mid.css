@@ -204,6 +204,12 @@
   .flex-grid-col3 .J_dynamic_box .product-group .clearfix .placeholder-box {
     padding: 0 !important;
   }
+  .responsive-box.daraz .thumb-bx{
+    border-radius: 7px !important;
+  }
+  .lzd-act-product-slot-endless-scroll .card-product-slot-link{
+    border-radius: 7px !important;
+  }
   .lzd-act-product-slot-endless-scroll .li-pagination {
     height: 0 !important;
     width: auto !important;
