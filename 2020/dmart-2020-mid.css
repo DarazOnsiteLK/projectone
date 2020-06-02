@@ -158,49 +158,49 @@
 @media (max-width: 768px) {
   .responsive-box.daraz {
   }
-  .responsive-box.daraz .flex-grid-col3 {
+/*   .responsive-box.daraz .flex-grid-col3 {
     width: 103.77% !important;
-  }
-  .lzd-act-product-slot-endless-scroll
+  } */
+/*   .lzd-act-product-slot-endless-scroll
     .responsive-box.daraz
     .flex-grid-col3
     .flex-item {
     width: 49.2% !important;
     margin: 0 !important;
     box-shadow: -1px -1px 0px 0px rgba(0, 0, 0, 0.13) !important;
-  }
-  .lzd-act-product-slot-endless-scroll .card-product-desc {
+  } */
+/*   .lzd-act-product-slot-endless-scroll .card-product-desc {
     top: 10px !important;
     margin-top: 22px !important;
-  }
-  .lzd-act-product-slot-endless-scroll .card-product-slot-image {
+  } */
+/*   .lzd-act-product-slot-endless-scroll .card-product-slot-image {
     margin-top: 14px !important;
-  }
-  .lzd-act-product-slot-endless-scroll .card-product-slot-title {
+  } */
+/*   .lzd-act-product-slot-endless-scroll .card-product-slot-title {
     font-size: 14px !important;
     line-height: 20px !important;
     margin-top: 0 !important;
     height: 40px !important;
     text-align: center !important;
-  }
+  } */
   .two-line-clamp {
     max-height: 40px !important;
   }
-  .lzd-act-product-slot-endless-scroll .sale-price {
+/*   .lzd-act-product-slot-endless-scroll .sale-price {
     font-size: 14px !important;
     line-height: 15px !important;
     text-align: center !important;
     margin: 0 auto !important;
-  }
-  .lzd-act-product-slot-endless-scroll .second-line-price {
+  } */
+/*   .lzd-act-product-slot-endless-scroll .second-line-price {
     margin: 3.2% auto 0 !important;
-  }
-  .lzd-act-product-slot-endless-scroll .second-line-price .original-price {
+  } */
+/*   .lzd-act-product-slot-endless-scroll .second-line-price .original-price {
     font-size: 14px !important;
-  }
-  .lzd-act-product-slot-endless-scroll .second-line-price .discount {
+  } */
+/*   .lzd-act-product-slot-endless-scroll .second-line-price .discount {
     font-size: 14px !important;
-  }
+  } */
   .flex-grid-col3 .J_dynamic_box .product-group .clearfix .placeholder-box {
     padding: 0 !important;
   }
@@ -208,12 +208,12 @@
     height: 0 !important;
     width: auto !important;
   }
-  .lzd-act-product-slot-endless-scroll
+/*   .lzd-act-product-slot-endless-scroll
     .responsive-box.daraz
     .flex-grid-col3
     .flex-item {
     padding-left: 0 !important;
-  }
+  } */
 }
 .p-slider-daraz .p-slider-content {
   border-radius: 7px !important;
@@ -312,17 +312,16 @@
   }
 }
 @media (max-width: 767px) {
-  .lzd-act-product-slot-endless-scroll {
+/*   .lzd-act-product-slot-endless-scroll {
     background: #fff !important;
-  }
+  } */
   .lzd-act-product-slot-endless-scroll .card-product-slot-image {
     position: absolute !important;
     width: 100%;
     top: 0;
     border-radius: 0 !important;
   }
-
-  .lzd-act-product-slot-endless-scroll .card-product-slot-banner,
+/*   .lzd-act-product-slot-endless-scroll .card-product-slot-banner,
   .lzd-act-product-slot-endless-scroll .card-product-slot-link {
     width: 100%;
     height: 100%;
@@ -330,7 +329,7 @@
     padding-top: 166.4%;
     position: relative;
     border-radius: 0px !important;
-  }
+  } */
   .p-slider-product-img img {
     border-radius: 7px 7px 0 0 !important;
   }
@@ -366,14 +365,14 @@
   img,
   input {
   }
-  .responsive-box.daraz .flex-item {
+/*   .responsive-box.daraz .flex-item {
     margin-bottom: 1.2%;
-  }
-  .lzd-act-product-slot-endless-scroll .responsive-box.daraz .thumb-bx .thumb {
+  } */
+/*   .lzd-act-product-slot-endless-scroll .responsive-box.daraz .thumb-bx .thumb {
     width: 95%;
     text-align: center !important;
     left: 2.5px !important;
-  }
+  } */
 }
 @media (max-width: 768px) {
   .p-slider-product-list a {
