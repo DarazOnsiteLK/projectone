@@ -160,6 +160,7 @@
 }
 .mui-zebra-page {
   background-color: #3c0ca4 !important;
+  background-size: cover !important;
 }
 .lzd-act-title .title {
   font-family: "Montserrat", sans-serif !important;
