@@ -167,6 +167,7 @@
 @media(min-width: 768px){
 .mui-zebra-page {
   background-color: #3c0ca4 !important;
+  background-size: contain !important;
 }
 }
 .lzd-act-title .title {
