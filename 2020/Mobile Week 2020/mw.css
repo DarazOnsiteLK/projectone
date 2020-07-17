@@ -306,6 +306,9 @@
   .p-slider-product-title {
     margin-left: 6px;
   }
+  .p-slider-daraz .p-slider-product-title{
+    width: 190px !important;
+  }
   .p-slider-product-price {
     margin-left: 6px;
   }
