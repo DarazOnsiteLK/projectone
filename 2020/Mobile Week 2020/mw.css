@@ -12,6 +12,9 @@
       rgba(254, 202, 12, 1) 0%,
       rgba(255, 173, 1, 1) 100%
     );
+    .lzd-act-voucher-list-scroll-daraz .flex-grid-scroll{
+      height: 60vw !important;
+    }
   }
   .hwc-counter .sign::after {
     color: #fff !important;
