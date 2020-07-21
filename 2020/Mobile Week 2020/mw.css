@@ -293,7 +293,7 @@
     .responsive-box.daraz
     .flex-grid-col3
     .flex-item {
-    padding-left: 0 !important;
+    padding: 0 3% !important;
   }
 }
 .p-slider-daraz .p-slider-content {
