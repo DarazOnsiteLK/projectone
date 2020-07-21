@@ -16,8 +16,8 @@
       height: 60vw !important;
     }
 /*   Xbanner 3 in a row alignent fix for app   */
-    .responsive-box.daraz .flex-grid-col2 .flex-item, .responsive-box.daraz .flex-grid-col3 .flex-item, .responsive-box.daraz .flex-grid-col4 .flex-item{
-      padding-left: 0% !important;
+    .responsive-box.daraz .flex-grid-col2, .responsive-box.daraz .flex-grid-col3, .responsive-box.daraz .flex-grid-col4{
+      padding: 0% !important;
     }
   }
   .hwc-counter .sign::after {
