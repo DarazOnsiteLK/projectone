@@ -528,3 +528,66 @@
 .mui-zebra-page {
   background-repeat: no-repeat;
 }
+    @media (max-width:767px){
+      .lzd-act-icon-navigation{
+      background-color:transparent !important;
+      height: 150px !important;
+    }
+    .lzd-act-icon-navigation-text, .lzd-act-navigation-icon-text{
+      margin-top: 3px !important;
+      padding: 3px !important;
+     }
+     .lzd-act-icon-navigation-list{
+        height: 150px !important;
+     }
+     .lzd-act-icon-navigation-item{
+       margin: auto !important;
+     }
+     .lzd-act-icon-navigation-list .lzd-act-icon-navigation-item .custom-icon{
+      width: 65px !important;
+      height: 65px !important; 
+      box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;
+      border-radius: 50px !important; 
+      background: transparent;
+      border: 3px solid #fff;
+      margin-bottom: 7px;
+    }
+    .lzd-act-icon-navigation-text, .lzd-act-navigation-icon-text{
+      color: #fff !important;
+      font-family: 'Montserrat', sans-serif !important;
+      font-weight: 600 !important;
+    }
+    .lzd-act-banner{
+      margin-top: 15px !important;
+    }
+    }
+    @media (min-width: 768px){
+    .lzd-act-icon-navigation{
+        background-color:transparent !important;
+    }
+    .lzd-act-navigation-icon-text{
+     margin-top: 10px !important; color: #fff !important;
+     padding-bottom: 12px;
+     height: 75% !important;
+    } .lzd-act-navigation-icon-list{
+        height: 175px !important;
+     }
+    .lzd-act-navigation-icon-list .lzd-act-navigation-item-icon .custom-icon{
+     width: 75px !important;
+     height: 75px !important;
+     border-radius: 50px !important;
+     box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important ; 
+     background: transparent !important;
+     border: 3px solid #fff;
+     }
+    .lzd-act-navigation-icon-text{
+      font-family: 'Montserrat', sans-serif !important;
+      font-weight: 600 !important;
+      color: #fff !important;
+    }.lzd-act-icon-flipsnap{
+      height: 175px !important;
+    }
+    .icon-navigation-arrow{
+     color: #fff !important;
+    }
+    }
