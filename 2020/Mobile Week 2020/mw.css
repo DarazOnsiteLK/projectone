@@ -560,6 +560,8 @@
     .lzd-act-banner{
       margin-top: 15px !important;
     }
+      .daz-scrolling-xbanner .container{
+        background: #fff0 !important;
     }
     @media (min-width: 768px){
     .lzd-act-icon-navigation{
