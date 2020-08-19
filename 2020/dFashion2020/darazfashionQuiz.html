@@ -1,0 +1,2474 @@
+<link
+  href="https://fonts.googleapis.com/css?family=Montserrat:300,700"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  crossorigin="anonymous"
+/>
+<style>
+  body {
+    background-color: #f6f6f6;
+  }
+
+  .progress {
+    margin: 10px;
+    box-shadow: rgb(189, 198, 207) 0px 1px 2px 1px;
+  }
+</style>
+
+<div id="quizBody" class="mt-3">
+  <div
+    id="quiz"
+    class="container"
+    style="font-family: 'Montserrat', sans-serif !important;"
+  >
+    <div class="col-md-12 col-xs-12">
+      <div class="row">
+        <div
+          id="timedisplay"
+          class="container-fluid p-5 rounded"
+          style="box-shadow: 0 1px 2px 1px rgba(189, 198, 207, 41);"
+        >
+          <div class="row">
+            <div class="col-md-12 mt-3">
+              <h3
+                class="text-center py-2 text-light font-weight-bold rounded"
+                style="background: #4f0d92;"
+              >
+                Quiz
+              </h3>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="progress">
+                  <div
+                    id="dynamic"
+                    class="progress-bar progress-bar-striped progress-bar-animated"
+                    role="progressbar"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 1%;"
+                  >
+                    <span id="current-progress"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="quizContainer"
+            class="container rounded"
+            style="box-shadow: 0 1px 2px 1px rgba(189, 198, 207, 41);"
+          >
+            <div class="row">
+              <div class="col-md-12 my-3" id="category-select-area">
+                <div class="container">
+                  <h4
+                    for=""
+                    class="py-2 text-center font-weight-bold bg-warning text-dark"
+                  >
+                    What's Your Gender
+                  </h4>
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <img
+                          onclick="goQuiz1()"
+                          class="img-fluid"
+                          id="category1"
+                          src="https://images.pexels.com/photos/3755706/pexels-photo-3755706.jpeg?auto=compress&cs=tinysrgb&h=400&w=600"
+                          alt=""
+                          style="cursor: pointer;"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <img
+                          onclick="goQuiz2()"
+                          class="img-fluid"
+                          id="category2"
+                          src="https://images.pexels.com/photos/4622423/pexels-photo-4622423.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600"
+                          alt=""
+                          style="
+                            height: 300px;
+                            object-fit: cover;
+                            width: 100%;
+                            cursor: pointer;
+                          "
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12" id="quiz-area" style="display: none;">
+                <div class="col-md-12">
+                  <br />
+                  <div
+                    id="quizContainer"
+                    class="container rounded"
+                    style="box-shadow: 0 1px 2px 1px rgba(189, 198, 207, 41);"
+                  >
+                    <div class="col-md-12">
+                      <div class="row">
+                        <div id="firstQ" class="singleQuiz">
+                          <div class="col-md-12">
+                            <div class="col-md-12">
+                              <br />
+                              <p>
+                                <b
+                                  >1. If we opened your closet, what color
+                                  palette would we mostly see?</b
+                                >
+                              </p>
+
+                              <ul>
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q1"
+                                  value="1"
+                                  id="first-first"
+                                  onchange="call1()"
+                                />
+                                <label
+                                  class="lang"
+                                  id="correctString1"
+                                  style="font-weight: 300 !important;"
+                                  >Black and neutrals
+                                </label>
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q1"
+                                  value="2"
+                                  id="first-second"
+                                  onchange="call2()"
+                                />
+                                <label
+                                  class="lang"
+                                  style="font-weight: 300 !important;"
+                                  >A rainbow of colors</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q1"
+                                  value="3"
+                                  id="first-third"
+                                  onchange="call3()"
+                                />
+                                <label
+                                  class="lang"
+                                  style="font-weight: 300 !important;"
+                                  >Dark tones and luminous highlights</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q1"
+                                  value="4"
+                                  id="first-fourth"
+                                  onchange="call4()"
+                                />
+                                <label
+                                  class="lang"
+                                  style="font-weight: 300 !important;"
+                                  >Earthy or pastel tones</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q1"
+                                  value="5"
+                                  id="first-fifth"
+                                  onchange="call5()"
+                                />
+                                <label
+                                  class="lang"
+                                  style="font-weight: 300 !important;"
+                                  >Black and white</label
+                                >
+                                <!-- add a fun for this -->
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          id="secondQ"
+                          class="singleQuiz"
+                          style="display: none;"
+                        >
+                          <div class="col-md-12">
+                            <div class="col-md-12">
+                              <br />
+                              <p>
+                                <b>2. How would your besties describe you?</b>
+                              </p>
+
+                              <ul>
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q2"
+                                  value="1"
+                                  id="second-first"
+                                  onchange="call6()"
+                                />
+                                <label
+                                  class="lang"
+                                  style="font-weight: 300 !important;"
+                                  >Traditional and proper</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q2"
+                                  value="2"
+                                  id="second-second"
+                                  onchange="call7()"
+                                />
+                                <label
+                                  class="lang"
+                                  id="correctString2"
+                                  style="font-weight: 300 !important;"
+                                  >Friendly and cheerful</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q2"
+                                  value="3"
+                                  id="second-third"
+                                  onchange="call8()"
+                                />
+                                <label
+                                  class="lang"
+                                  style="font-weight: 300 !important;"
+                                  >Playful and direct</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q2"
+                                  value="4"
+                                  id="second-fourth"
+                                  onchange="call9()"
+                                />
+                                <label
+                                  class="lang"
+                                  style="font-weight: 300 !important;"
+                                  >Trendy and classy</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q2"
+                                  value="5"
+                                  id="second-fifth"
+                                  onchange="call10()"
+                                />
+                                <label
+                                  class="lang"
+                                  style="font-weight: 300 !important;"
+                                  >Relaxed and liberal</label
+                                >
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          id="thirdQ"
+                          class="singleQuiz"
+                          style="display: none;"
+                        >
+                          <div class="col-md-12">
+                            <div class="col-md-12">
+                              <br />
+                              <p>
+                                <b
+                                  >3. You’ve got 15 minutes to dress up for a
+                                  party, what look would you go for?</b
+                                >
+                              </p>
+
+                              <ul>
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q3"
+                                  value="1"
+                                  id="third-first"
+                                  onchange="call11()"
+                                />
+                                <label
+                                  class="lang"
+                                  style="font-weight: 300 !important;"
+                                  >A simple yet smart look</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q3"
+                                  value="2"
+                                  id="third-second"
+                                  onchange="call12()"
+                                />
+                                <label
+                                  class="lang"
+                                  id="correctString2"
+                                  style="font-weight: 300 !important;"
+                                  >Something romantic and stylish</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q3"
+                                  value="3"
+                                  id="third-third"
+                                  onchange="call13()"
+                                />
+                                <label
+                                  class="lang"
+                                  style="font-weight: 300 !important;"
+                                  >A comfy look with a dramatic flare</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q3"
+                                  value="4"
+                                  id="third-fourth"
+                                  onchange="call14()"
+                                />
+                                <label
+                                  class="lang"
+                                  style="font-weight: 300 !important;"
+                                  >A stylish casual look</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q3"
+                                  value="5"
+                                  id="third-fifth"
+                                  onchange="call15()"
+                                />
+                                <label
+                                  class="lang"
+                                  style="font-weight: 300 !important;"
+                                  >A comfortable and laid back look</label
+                                >
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          id="fourthQ"
+                          class="singleQuiz"
+                          style="display: none;"
+                        >
+                          <div class="col-md-12">
+                            <div class="col-md-12">
+                              <br />
+                              <p>
+                                <b
+                                  >4. How would you spend a Rs.10,000 shopping
+                                  voucher?
+                                </b>
+                              </p>
+
+                              <ul>
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q4"
+                                  value="1"
+                                  id="fourth-first"
+                                  onchange="call16()"
+                                />
+                                <label
+                                  class="lang"
+                                  style="font-weight: 300 !important;"
+                                  >Shop for a few practical basics</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q4"
+                                  value="2"
+                                  id="fourth-second"
+                                  onchange="call17()"
+                                />
+                                <label
+                                  class="lang"
+                                  style="font-weight: 300 !important;"
+                                  >Buy high-quality, smart pieces that are sure
+                                  to be in style</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q4"
+                                  value="3"
+                                  id="fourth-third"
+                                  onchange="call18()"
+                                />
+                                <label
+                                  class="lang"
+                                  style="font-weight: 300 !important;"
+                                  >Shop for something unusual and unique to add
+                                  to your collection</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q4"
+                                  value="4"
+                                  id="fourth-fourth"
+                                  onchange="call19()"
+                                />
+                                <label
+                                  class="lang"
+                                  style="font-weight: 300 !important;"
+                                  >Shop for an exclusive designer piece matching
+                                  the current trend</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q4"
+                                  value="5"
+                                  id="fourth-fifth"
+                                  onchange="call20()"
+                                />
+                                <label
+                                  class="lang"
+                                  style="font-weight: 300 !important;"
+                                  >Head over to a sale and purchase the best
+                                  items with value for money</label
+                                >
+                                <!-- fn change -->
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          id="fifthQ"
+                          class="singleQuiz"
+                          style="display: none;"
+                        >
+                          <div class="col-md-12">
+                            <div class="col-md-12">
+                              <br />
+                              <p>
+                                <b
+                                  >5. When you walk into an event full of
+                                  unknown people, what would you do?</b
+                                >
+                              </p>
+
+                              <ul>
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q5"
+                                  value="1"
+                                  id="five-first"
+                                  onchange="call21();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >Blend in with everyone</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q5"
+                                  value="2"
+                                  id="five-second"
+                                  onchange="call22();"
+                                />
+                                <label
+                                  class="lang"
+                                  id="correctString2"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >Be animated and stand out
+                                </label>
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q5"
+                                  value="3"
+                                  id="five-third"
+                                  onchange="call23();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >Be the center of attention</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q5"
+                                  value="4"
+                                  id="five-fourth"
+                                  onchange="call24();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >Be friendly and socialize</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q5"
+                                  value="5"
+                                  id="five-fifth"
+                                  onchange="call25();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >Be natural and easy going</label
+                                >
+                                <!-- fn change -->
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--  new divs -->
+
+                        <div
+                          id="sixthQ"
+                          class="singleQuiz"
+                          style="display: none;"
+                        >
+                          <div class="col-md-12">
+                            <div class="col-md-12">
+                              <br />
+                              <p><b>6. How often do you shop?</b></p>
+
+                              <ul>
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q6"
+                                  value="1"
+                                  id="six-first"
+                                  onchange="call26(); "
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >Once in a while</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q6"
+                                  value="2"
+                                  id="six-second"
+                                  onchange="call27(); "
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >For every occasion</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q6"
+                                  value="3"
+                                  id="six-third"
+                                  onchange="call28(); "
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >Always</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q6"
+                                  value="4"
+                                  id="six-fourth"
+                                  onchange="call29(); "
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >For every season</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q6"
+                                  value="5"
+                                  id="six-fifth"
+                                  onchange="call30(); "
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >Whenever needed</label
+                                >
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          id="seventhQ"
+                          class="singleQuiz"
+                          style="display: none;"
+                        >
+                          <div class="col-md-12">
+                            <div class="col-md-12">
+                              <br />
+                              <p><b>7. What is your everyday look?</b></p>
+
+                              <ul>
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q7"
+                                  value="1"
+                                  id="seven-first"
+                                  onchange="call31();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >Smart casual</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q7"
+                                  value="2"
+                                  id="seven-second"
+                                  onchange="call32();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >Cheeky</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q7"
+                                  value="3"
+                                  id="seven-third"
+                                  onchange="call33();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >Vibrant and exciting</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q7"
+                                  value="4"
+                                  id="seven-fourth"
+                                  onchange="call34();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >Stylish</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q7"
+                                  value="5"
+                                  id="seven-fifth"
+                                  onchange="call35();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >Comfortable</label
+                                >
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          id="eightQ"
+                          class="singleQuiz"
+                          style="display: none;"
+                        >
+                          <div class="col-md-12">
+                            <div class="col-md-12">
+                              <br />
+                              <p>
+                                <b>8. What is your favorite makeup look?</b>
+                              </p>
+
+                              <ul>
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q8"
+                                  value="1"
+                                  id="eight-first"
+                                  onchange="call36();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >Natural and cleancut</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q8"
+                                  value="2"
+                                  id="eight-second"
+                                  onchange="call37();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >Colorful and funky</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q8"
+                                  value="3"
+                                  id="eight-third"
+                                  onchange="call38();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >Bold and dramatic</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q8"
+                                  value="4"
+                                  id="eight-fourth"
+                                  onchange="call39();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >Looks in trend for the season</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q8"
+                                  value="5"
+                                  id="eight-fifth"
+                                  onchange="call40();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >No makeup</label
+                                >
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          id="ninethQ"
+                          class="singleQuiz"
+                          style="display: none;"
+                        >
+                          <div class="col-md-12">
+                            <div class="col-md-12">
+                              <br />
+                              <p>
+                                <b
+                                  >9. It’s girls night out, what would you dress
+                                  up in?</b
+                                >
+                              </p>
+
+                              <ul>
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q9"
+                                  value="1"
+                                  id="nine-first"
+                                  onchange="call41();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >A wrap skirt with a satin blouse and kitty
+                                  heels</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q9"
+                                  value="2"
+                                  id="nine-second"
+                                  onchange="call42();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >A denim jean and a crop top with a pair of
+                                  sneakers</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q9"
+                                  value="3"
+                                  id="nine-third"
+                                  onchange="call43();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >A glam jumpsuit with a pair of boots and a
+                                  jacket</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q9"
+                                  value="4"
+                                  id="nine-fourth"
+                                  onchange="call44();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >An dinner dress with a pair of pumps</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q9"
+                                  value="5"
+                                  id="nine-fifth"
+                                  onchange="call45();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >A tunic with a pair of sandals</label
+                                >
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          id="tenthQ"
+                          class="singleQuiz"
+                          style="display: none;"
+                        >
+                          <div class="col-md-12">
+                            <div class="col-md-12">
+                              <br />
+                              <p>
+                                <b
+                                  >10. You are headed to Ella for the weekend,
+                                  what clothes would you pack?</b
+                                >
+                              </p>
+
+                              <ul>
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q10"
+                                  value="1"
+                                  id="ten-first"
+                                  onchange="call46();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >Separate clothes for travelling and
+                                  trekking</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q10"
+                                  value="2"
+                                  id="ten-second"
+                                  onchange="call47();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >Few pre-selected outfits for each
+                                  location</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q10"
+                                  value="3"
+                                  id="ten-third"
+                                  onchange="call48();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >A mixture of different types of clothes to
+                                  select from</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q10"
+                                  value="4"
+                                  id="ten-fourth"
+                                  onchange="call49();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >All the new and trendy items in the
+                                  closet</label
+                                >
+                                <br />
+                                <input
+                                  class="answer"
+                                  type="radio"
+                                  name="q10"
+                                  value="5"
+                                  id="ten-fifth"
+                                  onchange="call50();"
+                                />
+                                <label
+                                  class="lang"
+                                  style="
+                                    font-weight: 300 !important;
+                                    display: inline;
+                                  "
+                                  >Whatever that looks comfortable</label
+                                >
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+<!-- 2nd phase -->
+                      <input type="text" id="output" style="" value="" />
+                      <input type="text" id="output1" style="" value="" />
+                      <input type="text" id="output2" style="" value="" />
+                      <input type="text" id="output3" style="" value="" />
+                      <input type="text" id="output4" style="" value="" />
+                      <input type="text" id="output5" style="" value="" />
+                      <input type="text" id="output6" style="" value="" />
+                      <input type="text" id="output7" style="" value="" />
+                      <input type="text" id="output8" style="" value="" />
+                      <input type="text" id="output9" style="" value="" />
+                      <input type="text" id="output10" style="" value="" />
+                    </div>
+                  </div>
+                  <div
+                    class="col-md-12 my-4 d-flex justify-content-start flex-row-reverse"
+                  >
+                    <div class="row">
+                      <div class="" id="btnext0">
+                        <button
+                          class="btn btn-dark font-weight-bold"
+                          onclick="nextQuestion0()"
+                        >
+                          Next
+                        </button>
+                      </div>
+
+                      <div class="mr-3" id="btnext1" style="display: none;">
+                        <button
+                          class="btn btn-dark font-weight-bold"
+                          onclick="nextQuestion1()"
+                        >
+                          Next
+                        </button>
+                      </div>
+                      <div class="mr-3" id="btnext2" style="display: none;">
+                        <button
+                          class="btn btn-dark font-weight-bold"
+                          onclick="nextQuestion2()"
+                        >
+                          Next
+                        </button>
+                      </div>
+                      <div class="mr-3" id="btnext3" style="display: none;">
+                        <button
+                          class="btn btn-dark font-weight-bold"
+                          onclick="nextQuestion3()"
+                        >
+                          Next
+                        </button>
+                      </div>
+                      <div class="mr-3" id="btnext4" style="display: none;">
+                        <button
+                          class="btn btn-dark font-weight-bold"
+                          onclick="nextQuestion4()"
+                        >
+                          Next
+                        </button>
+                      </div>
+                      <div class="mr-3" id="btnext5" style="display: none;">
+                        <button
+                          class="btn btn-dark font-weight-bold"
+                          onclick="nextQuestion5()"
+                        >
+                          Next
+                        </button>
+                      </div>
+                      <div class="mr-3" id="btnext6" style="display: none;">
+                        <button
+                          class="btn btn-dark font-weight-bold"
+                          onclick="nextQuestion6()"
+                        >
+                          Next
+                        </button>
+                      </div>
+                      <div class="mr-3" id="btnext7" style="display: none;">
+                        <button
+                          class="btn btn-dark font-weight-bold"
+                          onclick="nextQuestion7()"
+                        >
+                          Next
+                        </button>
+                      </div>
+                      <div class="mr-3" id="btnext8" style="display: none;">
+                        <button
+                          class="btn btn-dark font-weight-bold"
+                          onclick="nextQuestion8()"
+                        >
+                          Next
+                        </button>
+                      </div>
+                      <div class="mr-3" id="btnext9" style="display: none;">
+                        <button
+                          class="btn btn-dark font-weight-bold"
+                          onclick="nextQuestion9()"
+                        >
+                          Next
+                        </button>
+                      </div>
+
+                      <!-- submitQuiz(); Function of Completed btn -->
+                      <div class="" id="submit-btn" style="display: none;">
+                        <input
+                          onclick="quizComplete();dataReceive();"
+                          class="btn btn-dark mr-3"
+                          type="submit"
+                          value="Complete"
+                          style="font-weight: 800 !important;"
+                        />
+                      </div>
+
+                      <div id="btprev0" style="display: none;">
+                        <button
+                          class="btn btn-dark font-weight-bold"
+                          onclick="prevQuestion0()"
+                        >
+                          Previous
+                        </button>
+                      </div>
+                      <div id="btprev1" style="display: none;">
+                        <button
+                          class="btn btn-dark font-weight-bold"
+                          onclick="prevQuestion1()"
+                        >
+                          Previous
+                        </button>
+                      </div>
+                      <div id="btprev2" style="display: none;">
+                        <button
+                          class="btn btn-dark font-weight-bold"
+                          onclick="prevQuestion2()"
+                        >
+                          Previous
+                        </button>
+                      </div>
+                      <div id="btprev3" style="display: none;">
+                        <button
+                          class="btn btn-dark font-weight-bold"
+                          onclick="prevQuestion3()"
+                        >
+                          Previous
+                        </button>
+                      </div>
+                      <div id="btprev4" style="display: none;">
+                        <button
+                          class="btn btn-dark font-weight-bold"
+                          onclick="prevQuestion4()"
+                        >
+                          Previous
+                        </button>
+                      </div>
+                      <div id="btprev5" style="display: none;">
+                        <button
+                          class="btn btn-dark font-weight-bold"
+                          onclick="prevQuestion5()"
+                        >
+                          Previous
+                        </button>
+                      </div>
+                      <div id="btprev6" style="display: none;">
+                        <button
+                          class="btn btn-dark font-weight-bold"
+                          onclick="prevQuestion6()"
+                        >
+                          Previous
+                        </button>
+                      </div>
+                      <div id="btprev7" style="display: none;">
+                        <button
+                          class="btn btn-dark font-weight-bold"
+                          onclick="prevQuestion7()"
+                        >
+                          Previous
+                        </button>
+                      </div>
+                      <div id="btprev8" style="display: none;">
+                        <button
+                          class="btn btn-dark font-weight-bold"
+                          onclick="prevQuestion8()"
+                        >
+                          Previous
+                        </button>
+                      </div>
+                    </div>
+                    <br /><br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script type="text/javascript">
+            var submitted = false;
+          </script>
+
+          <iframe
+            name="hidden_iframe"
+            id="hidden_iframe"
+            style="display: none;"
+            onload="if(submitted) { setTimeout(function (){
+          window.location='https://www.daraz.lk/wow/camp/daraz/megascenario/lk/campaign/daraz-quiz?hybrid=1';
+        },5000);
+          };"
+          >
+          </iframe>
+
+          <div
+            class="container"
+            style="
+              box-shadow: 0 1px 2px 1px rgba(189, 198, 207, 0.41);
+              display: none;
+            "
+            id="formSubmit"
+          >
+            <div class="row">
+              <div class="col-md-12">
+                <br />
+                <form
+                  name="quizform"
+                  action="https://docs.google.com/forms/d/e/1FAIpQLScduGtjycg6obYVHyms8hQzg6aLbWKeY-Og0wdVR3P_q6u9Vw/formResponse"
+                  method="post"
+                  target="hidden_iframe"
+                  onsubmit="submitted=true;"
+                >
+                  <div class="form-group col-md-6">
+                    <label class="lang" for="email">Email Address</label>
+                    <label id="result"></label>
+                    <input
+                      id="email"
+                      type="text"
+                      placeholder="Enter Your Daraz Email"
+                      name="entry.532582127"
+                      class="form-control"
+                      required
+                      onkeyup="manage(this)"
+                    />
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label class="lang" for="name">Name</label>
+                    <label id="result"></label>
+                    <input
+                      id="name"
+                      type="text"
+                      placeholder="Enter Your Name"
+                      name="entry.661555125"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group col-md-6" style="display: none;">
+                    <label class="lang" for="Question">Question 1</label>
+                    <input
+                      id="textbox1"
+                      type="text"
+                      name="entry.868437899"
+                      readonly="true"
+                      class="form-control"
+                      value="not yet"
+                    />
+                  </div>
+                  <div class="form-group col-md-6" style="display: none;">
+                    <label class="lang" for="Question">Question 2</label>
+                    <input
+                      id="textbox2"
+                      type="text"
+                      name="entry.236999117"
+                      readonly="true"
+                      class="form-control"
+                      value="not yet"
+                    />
+                  </div>
+                  <div class="form-group col-md-6" style="display: none;">
+                    <label class="lang" for="Question">Question 3</label>
+                    <input
+                      id="textbox3"
+                      type="text"
+                      name="entry.2140860441"
+                      readonly="true"
+                      class="form-control"
+                      value="not yet"
+                    />
+                  </div>
+                  <div class="form-group col-md-6" style="display: none;">
+                    <label class="lang" for="Question">Question 4</label>
+                    <input
+                      id="textbox4"
+                      type="text"
+                      name="entry.1287105059"
+                      readonly="true"
+                      class="form-control"
+                      value="not yet"
+                    />
+                  </div>
+                  <div class="form-group col-md-6" style="display: none;">
+                    <label class="lang" for="Question">Question 5</label>
+                    <input
+                      id="textbox5"
+                      type="text"
+                      name="entry.602192381"
+                      readonly="true"
+                      class="form-control"
+                      value="not yet"
+                    />
+                  </div>
+                  <div class="form-group col-md-6" style="display: none;">
+                    <label class="lang" for="Question">Question 6</label>
+                    <input
+                      id="textbox6"
+                      type="text"
+                      name="entry.1592300102"
+                      readonly="true"
+                      class="form-control"
+                      value="not yet"
+                    />
+                  </div>
+                  <div class="form-group col-md-6" style="display: none;">
+                    <label class="lang" for="Question">Question 7</label>
+                    <input
+                      id="textbox7"
+                      type="text"
+                      name="entry.929062585"
+                      readonly="true"
+                      class="form-control"
+                      value="not yet"
+                    />
+                  </div>
+                  <div class="form-group col-md-6" style="display: none;">
+                    <label class="lang" for="Question">Question 8</label>
+                    <input
+                      id="textbox8"
+                      type="text"
+                      name="entry.523427538"
+                      readonly="true"
+                      class="form-control"
+                      value="not yet"
+                    />
+                  </div>
+                  <div class="form-group col-md-6" style="display: none;">
+                    <label class="lang" for="Question">Question 9</label>
+                    <input
+                      id="textbox9"
+                      type="text"
+                      name="entry.1330723352"
+                      readonly="true"
+                      class="form-control"
+                      value="not yet"
+                    />
+                  </div>
+                  <div class="form-group col-md-6" style="display: none;">
+                    <label class="lang" for="Question">Question 10</label>
+                    <input
+                      id="textbox10"
+                      type="text"
+                      name="entry.1730554130"
+                      readonly="true"
+                      class="form-control"
+                      value="not yet"
+                    />
+                  </div>
+
+                  <div class="form-group col-md-12">
+                    <div class="">
+                      <button
+                        id="validate"
+                        type="submit"
+                        class="btn btn-success btn-margin font-weight-bold"
+                        data-toggle="modal"
+                        data-target="#myModal"
+                        disabled
+                        style="text-transform: uppercase;"
+                      >
+                        Submit
+                      </button>
+                      <a
+                        class="btn btn-danger btn-margin"
+                        style="
+                          text-decoration: none !important;
+                          color: white !important;
+                        "
+                        href="https://www.daraz.lk/wow/camp/daraz/megascenario/lk/campaign/crm-quiz?hybrid=1"
+                      >
+                        <b>TRY AGAIN</b></a
+                      >
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="modal fade" role="dialog" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <input
+                type="submit"
+                role="button"
+                class="close"
+                data-dismiss="modal"
+                value="&times;"
+              />
+            </div>
+            <div class="modal-body">
+              <p
+                class="text-center"
+                style="
+                  font-size: 18px;
+                  font-family: 'Montserrat', sans-serif !important;
+                "
+              >
+                <b>Thank you for your participation in the Quiz!</b>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <input
+                type="submit"
+                role="button"
+                class="btn btn-default"
+                data-dismiss="modal"
+                value="Close"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script>
+    $('input[type="radio"]').on("change", function () {
+      $('input[type="radio"]').not(this).prop("checked", false);
+    });
+
+    function goQuiz1() {
+      document
+        .getElementById("category1")
+        .addEventListener("click", function () {
+          document.getElementById("category-select-area").style.display =
+            "none";
+          document.getElementById("quiz-area").style.display = "unset";
+        });
+    }
+    function goQuiz2() {
+      document
+        .getElementById("category2")
+        .addEventListener("click", function () {
+          document.getElementById("category-select-area").style.display =
+            "none";
+          document.getElementById("quiz-area").style.display = "unset";
+        });
+    }
+    // Please Start the object count from 0 if testing in local Environment
+    // Laz Environment Object count start from 7
+    // Laz App Environment Start from 0
+    function call1() {
+      var input = document.getElementById("first-first").value;
+      document.getElementById("output").value = input;
+    }
+
+    function call2() {
+      var input = document.getElementById("first-second").value;
+      document.getElementById("output").value = input;
+    }
+
+    function call3() {
+      var input = document.getElementById("first-third").value;
+      document.getElementById("output").value = input;
+    }
+
+    function call4() {
+      var input = document.getElementById("first-fourth").value;
+      document.getElementById("output").value = input;
+    }
+
+    function call5() {
+      var input = document.getElementById("first-fifth").value;
+      document.getElementById("output").value = input;
+    }
+
+    function call6() {
+      var input = document.getElementById("second-first").value;
+      document.getElementById("output1").value = input;
+    }
+
+    function call7() {
+      var input = document.getElementById("second-second").value;
+      document.getElementById("output1").value = input;
+    }
+
+    function call8() {
+      var input = document.getElementById("second-third").value;
+      document.getElementById("output1").value = input;
+    }
+
+    function call9() {
+      var input = document.getElementById("second-fourth").value;
+      document.getElementById("output1").value = input;
+    }
+
+    function call10() {
+      var input = document.getElementById("second-fifth").value;
+      document.getElementById("output1").value = input;
+    }
+
+    function call11() {
+      var input = document.getElementById("third-first").value;
+      document.getElementById("output2").value = input;
+    }
+
+    function call12() {
+      var input = document.getElementById("third-second").value;
+      document.getElementById("output2").value = input;
+    }
+
+    function call13() {
+      var input = document.getElementById("third-third").value;
+      document.getElementById("output2").value = input;
+    }
+
+    function call14() {
+      var input = document.getElementById("third-fourth").value;
+      document.getElementById("output2").value = input;
+    }
+
+    function call15() {
+      var input = document.getElementById("third-fifth").value;
+      document.getElementById("output2").value = input;
+    }
+
+    function call16() {
+      var input = document.getElementById("fourth-first").value;
+      document.getElementById("output3").value = input;
+    }
+
+    function call17() {
+      var input = document.getElementById("fourth-second").value;
+      document.getElementById("output3").value = input;
+    }
+
+    function call18() {
+      var input = document.getElementById("fourth-third").value;
+      document.getElementById("output3").value = input;
+    }
+
+    function call19() {
+      var input = document.getElementById("fourth-fourth").value;
+      document.getElementById("output3").value = input;
+    }
+
+    function call20() {
+      var input = document.getElementById("fourth-fifth").value;
+      document.getElementById("output3").value = input;
+    }
+
+    function call21() {
+      var input = document.getElementById("five-first").value;
+      document.getElementById("output4").value = input;
+    }
+
+    function call22() {
+      var input = document.getElementById("five-second").value;
+      document.getElementById("output4").value = input;
+    }
+
+    function call23() {
+      var input = document.getElementById("five-third").value;
+      document.getElementById("output4").value = input;
+    }
+
+    function call24() {
+      var input = document.getElementById("five-fourth").value;
+      document.getElementById("output4").value = input;
+    }
+
+    function call25() {
+      var input = document.getElementById("five-fifth").value;
+      document.getElementById("output4").value = input;
+    }
+
+    function call26() {
+      var input = document.getElementById("six-first").value;
+      document.getElementById("output5").value = input;
+    }
+
+    function call27() {
+      var input = document.getElementById("six-second").value;
+      document.getElementById("output5").value = input;
+    }
+
+    function call28() {
+      var input = document.getElementById("six-third").value;
+      document.getElementById("output5").value = input;
+    }
+
+    function call29() {
+      var input = document.getElementById("six-fourth").value;
+      document.getElementById("output5").value = input;
+    }
+
+    function call30() {
+      var input = document.getElementById("six-fifth").value;
+      document.getElementById("output5").value = input;
+    }
+
+    function call31() {
+      var input = document.getElementById("seven-first").value;
+      document.getElementById("output6").value = input;
+    }
+
+    function call32() {
+      var input = document.getElementById("seven-second").value;
+      document.getElementById("output6").value = input;
+    }
+
+    function call33() {
+      var input = document.getElementById("seven-third").value;
+      document.getElementById("output6").value = input;
+    }
+
+    function call34() {
+      var input = document.getElementById("seven-fourth").value;
+      document.getElementById("output6").value = input;
+    }
+
+    function call35() {
+      var input = document.getElementById("seven-fifth").value;
+      document.getElementById("output6").value = input;
+    }
+
+    function call36() {
+      var input = document.getElementById("eight-first").value;
+      document.getElementById("output7").value = input;
+    }
+
+    function call37() {
+      var input = document.getElementById("eight-second").value;
+      document.getElementById("output7").value = input;
+    }
+
+    function call38() {
+      var input = document.getElementById("eight-third").value;
+      document.getElementById("output7").value = input;
+    }
+
+    function call39() {
+      var input = document.getElementById("eight-fourth").value;
+      document.getElementById("output7").value = input;
+    }
+
+    function call40() {
+      var input = document.getElementById("eight-fifth").value;
+      document.getElementById("output7").value = input;
+    }
+    function call41() {
+      var input = document.getElementById("nine-first").value;
+      document.getElementById("output8").value = input;
+    }
+    function call42() {
+      var input = document.getElementById("nine-second").value;
+      document.getElementById("output8").value = input;
+    }
+    function call43() {
+      var input = document.getElementById("nine-third").value;
+      document.getElementById("output8").value = input;
+    }
+    function call44() {
+      var input = document.getElementById("nine-fourth").value;
+      document.getElementById("output8").value = input;
+    }
+    function call45() {
+      var input = document.getElementById("nine-fifth").value;
+      document.getElementById("output8").value = input;
+    }
+    function call46() {
+      var input = document.getElementById("ten-first").value;
+      document.getElementById("output9").value = input;
+    }
+    function call47() {
+      var input = document.getElementById("ten-second").value;
+      document.getElementById("output9").value = input;
+    }
+    function call48() {
+      var input = document.getElementById("ten-third").value;
+      document.getElementById("output9").value = input;
+    }
+    function call49() {
+      var input = document.getElementById("ten-fourth").value;
+      document.getElementById("output9").value = input;
+    }
+    function call50() {
+      var input = document.getElementById("ten-fifth").value;
+      document.getElementById("output9").value = input;
+    }
+
+    function dataReceive() {
+      var finalInput1 = document.getElementById("output").value;
+      var textbox1 = document.getElementById("textbox1");
+      textbox1.value = finalInput1;
+
+      var finalInput2 = document.getElementById("output1").value;
+      var textbox = document.getElementById("textbox2");
+      textbox2.value = finalInput2;
+
+      var finalInput3 = document.getElementById("output2").value;
+      var textbox3 = document.getElementById("textbox3");
+      textbox3.value = finalInput3;
+
+      var finalInput4 = document.getElementById("output3").value;
+      var textbox4 = document.getElementById("textbox4");
+      textbox4.value = finalInput4;
+
+      var finalInput5 = document.getElementById("output4").value;
+      var textbox5 = document.getElementById("textbox5");
+      textbox5.value = finalInput5;
+
+      var finalInput6 = document.getElementById("output5").value;
+      var textbox6 = document.getElementById("textbox6");
+      textbox6.value = finalInput6;
+
+      var finalInput7 = document.getElementById("output6").value;
+      var textbox7 = document.getElementById("textbox7");
+      textbox7.value = finalInput7;
+
+      var finalInput8 = document.getElementById("output7").value;
+      var textbox8 = document.getElementById("textbox8");
+      textbox8.value = finalInput8;
+
+      var finalInput9 = document.getElementById("output8").value;
+      var textbox9 = document.getElementById("textbox9");
+      textbox9.value = finalInput9;
+
+      var finalInput10 = document.getElementById("output9").value;
+      var textbox10 = document.getElementById("textbox10");
+      textbox10.value = finalInput10;
+    }
+
+    function quizComplete() {
+      clearInterval(window.qT);
+      document.getElementById("quizContainer").style.display = "none";
+      document.getElementById("formSubmit").style.display = "block";
+      document.getElementById("timedisplay").style.display = "block";
+      document.getElementById("dynamic").style.width = "100%";
+    }
+
+    // Next Button
+    function nextQuestion0() {
+      document.getElementById("firstQ").style.display = "none";
+      document.getElementById("btprev0").style.display = "inline-block";
+      document.getElementById("btprev1").style.display = "none";
+      document.getElementById("btprev2").style.display = "none";
+      document.getElementById("btprev3").style.display = "none";
+      document.getElementById("btprev4").style.display = "none";
+      document.getElementById("btprev5").style.display = "none";
+      document.getElementById("btprev6").style.display = "none";
+      document.getElementById("btnext0").style.display = "none";
+      document.getElementById("btnext1").style.display = "inline-block";
+      document.getElementById("btnext2").style.display = "none";
+      document.getElementById("btnext3").style.display = "none";
+      document.getElementById("btnext4").style.display = "none";
+      document.getElementById("btnext5").style.display = "none";
+      document.getElementById("btnext6").style.display = "none";
+      document.getElementById("eightQ").style.display = "none";
+      document.getElementById("btnext7").style.display = "none";
+      document.getElementById("secondQ").style.display = "block";
+      document.getElementById("thirdQ").style.display = "none";
+      document.getElementById("fourthQ").style.display = "none";
+      document.getElementById("fifthQ").style.display = "none";
+      document.getElementById("sixthQ").style.display = "none";
+      document.getElementById("seventhQ").style.display = "none";
+      document.getElementById("ninethQ").style.display = "none";
+      document.getElementById("tenthQ").style.display = "none";
+      document.getElementById("dynamic").style.width = "10%";
+    }
+
+    function nextQuestion1() {
+      document.getElementById("firstQ").style.display = "none";
+      document.getElementById("btprev0").style.display = "none";
+      document.getElementById("btprev1").style.display = "inline-block";
+      document.getElementById("btprev2").style.display = "none";
+      document.getElementById("btprev3").style.display = "none";
+      document.getElementById("btprev4").style.display = "none";
+      document.getElementById("btprev5").style.display = "none";
+      document.getElementById("btprev6").style.display = "none";
+      document.getElementById("btnext0").style.display = "none";
+      document.getElementById("btnext1").style.display = "none";
+      document.getElementById("btnext2").style.display = "inline-block";
+      document.getElementById("btnext3").style.display = "none";
+      document.getElementById("btnext4").style.display = "none";
+      document.getElementById("btnext5").style.display = "none";
+      document.getElementById("btnext6").style.display = "none";
+      document.getElementById("eightQ").style.display = "none";
+      document.getElementById("btnext7").style.display = "none";
+      document.getElementById("secondQ").style.display = "none";
+      document.getElementById("thirdQ").style.display = "block";
+      document.getElementById("fourthQ").style.display = "none";
+      document.getElementById("fifthQ").style.display = "none";
+      document.getElementById("sixthQ").style.display = "none";
+      document.getElementById("seventhQ").style.display = "none";
+      document.getElementById("ninethQ").style.display = "none";
+      document.getElementById("tenthQ").style.display = "none";
+      document.getElementById("submit-btn").style.display = "none";
+      document.getElementById("dynamic").style.width = "20%";
+    }
+
+    function nextQuestion2() {
+      document.getElementById("firstQ").style.display = "none";
+      document.getElementById("btprev0").style.display = "none";
+      document.getElementById("btprev1").style.display = "none";
+      document.getElementById("btprev2").style.display = "inline-block";
+      document.getElementById("btprev3").style.display = "none";
+      document.getElementById("btprev4").style.display = "none";
+      document.getElementById("btprev5").style.display = "none";
+      document.getElementById("btprev6").style.display = "none";
+      document.getElementById("btnext0").style.display = "none";
+      document.getElementById("btnext1").style.display = "none";
+      document.getElementById("btnext2").style.display = "none";
+      document.getElementById("btnext3").style.display = "inline-block";
+      document.getElementById("btnext4").style.display = "none";
+      document.getElementById("btnext5").style.display = "none";
+      document.getElementById("btnext6").style.display = "none";
+      document.getElementById("eightQ").style.display = "none";
+      document.getElementById("btnext7").style.display = "none";
+      document.getElementById("secondQ").style.display = "none";
+      document.getElementById("thirdQ").style.display = "none";
+      document.getElementById("fourthQ").style.display = "block";
+      document.getElementById("fifthQ").style.display = "none";
+      document.getElementById("sixthQ").style.display = "none";
+      document.getElementById("seventhQ").style.display = "none";
+      document.getElementById("ninethQ").style.display = "none";
+      document.getElementById("tenthQ").style.display = "none";
+      document.getElementById("submit-btn").style.display = "none";
+      document.getElementById("dynamic").style.width = "30%";
+    }
+
+    function nextQuestion3() {
+      document.getElementById("firstQ").style.display = "none";
+      document.getElementById("btprev0").style.display = "none";
+      document.getElementById("btprev1").style.display = "none";
+      document.getElementById("btprev2").style.display = "none";
+      document.getElementById("btprev3").style.display = "inline-block";
+      document.getElementById("btprev4").style.display = "none";
+      document.getElementById("btprev5").style.display = "none";
+      document.getElementById("btprev6").style.display = "none";
+      document.getElementById("btnext0").style.display = "none";
+      document.getElementById("btnext1").style.display = "none";
+      document.getElementById("btnext2").style.display = "none";
+      document.getElementById("btnext3").style.display = "none";
+      document.getElementById("btnext4").style.display = "inline-block";
+      document.getElementById("btnext5").style.display = "none";
+      document.getElementById("btnext6").style.display = "none";
+      document.getElementById("eightQ").style.display = "none";
+      document.getElementById("btnext7").style.display = "none";
+      document.getElementById("secondQ").style.display = "none";
+      document.getElementById("thirdQ").style.display = "none";
+      document.getElementById("fourthQ").style.display = "none";
+      document.getElementById("fifthQ").style.display = "block";
+      document.getElementById("sixthQ").style.display = "none";
+      document.getElementById("seventhQ").style.display = "none";
+      document.getElementById("ninethQ").style.display = "none";
+      document.getElementById("tenthQ").style.display = "none";
+      document.getElementById("submit-btn").style.display = "none";
+      document.getElementById("dynamic").style.width = "40%";
+    }
+
+    function nextQuestion4() {
+      document.getElementById("firstQ").style.display = "none";
+      document.getElementById("btprev0").style.display = "none";
+      document.getElementById("btprev1").style.display = "none";
+      document.getElementById("btprev2").style.display = "none";
+      document.getElementById("btprev3").style.display = "none";
+      document.getElementById("btprev4").style.display = "inline-block";
+      document.getElementById("btprev5").style.display = "none";
+      document.getElementById("btprev6").style.display = "none";
+      document.getElementById("btnext0").style.display = "none";
+      document.getElementById("btnext1").style.display = "none";
+      document.getElementById("btnext2").style.display = "none";
+      document.getElementById("btnext3").style.display = "none";
+      document.getElementById("btnext4").style.display = "none";
+      document.getElementById("btnext5").style.display = "inline-block";
+      document.getElementById("btnext6").style.display = "none";
+      document.getElementById("eightQ").style.display = "none";
+      document.getElementById("btnext7").style.display = "none";
+      document.getElementById("secondQ").style.display = "none";
+      document.getElementById("thirdQ").style.display = "none";
+      document.getElementById("fourthQ").style.display = "none";
+      document.getElementById("fifthQ").style.display = "none";
+      document.getElementById("sixthQ").style.display = "block";
+      document.getElementById("seventhQ").style.display = "none";
+      document.getElementById("ninethQ").style.display = "none";
+      document.getElementById("tenthQ").style.display = "none";
+      document.getElementById("submit-btn").style.display = "none";
+      document.getElementById("dynamic").style.width = "50%";
+    }
+
+    function nextQuestion5() {
+      document.getElementById("firstQ").style.display = "none";
+      document.getElementById("btprev0").style.display = "none";
+      document.getElementById("btprev1").style.display = "none";
+      document.getElementById("btprev2").style.display = "none";
+      document.getElementById("btprev3").style.display = "none";
+      document.getElementById("btprev4").style.display = "none";
+      document.getElementById("btprev5").style.display = "inline-block";
+      document.getElementById("btprev6").style.display = "none";
+      document.getElementById("btnext0").style.display = "none";
+      document.getElementById("btnext1").style.display = "none";
+      document.getElementById("btnext2").style.display = "none";
+      document.getElementById("btnext3").style.display = "none";
+      document.getElementById("btnext4").style.display = "none";
+      document.getElementById("btnext5").style.display = "none";
+      document.getElementById("btnext6").style.display = "inline-block";
+      document.getElementById("eightQ").style.display = "none";
+      document.getElementById("btnext7").style.display = "none";
+      document.getElementById("secondQ").style.display = "none";
+      document.getElementById("thirdQ").style.display = "none";
+      document.getElementById("fourthQ").style.display = "none";
+      document.getElementById("fifthQ").style.display = "none";
+      document.getElementById("sixthQ").style.display = "none";
+      document.getElementById("seventhQ").style.display = "block";
+      document.getElementById("ninethQ").style.display = "none";
+      document.getElementById("tenthQ").style.display = "none";
+      document.getElementById("submit-btn").style.display = "none";
+      document.getElementById("dynamic").style.width = "60%";
+    }
+
+    function nextQuestion6() {
+      document.getElementById("firstQ").style.display = "none";
+      document.getElementById("btprev0").style.display = "none";
+      document.getElementById("btprev1").style.display = "none";
+      document.getElementById("btprev2").style.display = "none";
+      document.getElementById("btprev3").style.display = "none";
+      document.getElementById("btprev4").style.display = "none";
+      document.getElementById("btprev5").style.display = "none";
+      document.getElementById("btprev6").style.display = "inline-block";
+      document.getElementById("btnext0").style.display = "none";
+      document.getElementById("btnext1").style.display = "none";
+      document.getElementById("btnext2").style.display = "none";
+      document.getElementById("btnext3").style.display = "none";
+      document.getElementById("btnext4").style.display = "none";
+      document.getElementById("btnext5").style.display = "none";
+      document.getElementById("btnext6").style.display = "none";
+      document.getElementById("eightQ").style.display = "none";
+      document.getElementById("btnext7").style.display = "inline-block";
+      document.getElementById("secondQ").style.display = "none";
+      document.getElementById("thirdQ").style.display = "none";
+      document.getElementById("fourthQ").style.display = "none";
+      document.getElementById("fifthQ").style.display = "none";
+      document.getElementById("sixthQ").style.display = "none";
+      document.getElementById("seventhQ").style.display = "none";
+      document.getElementById("ninethQ").style.display = "none";
+      document.getElementById("tenthQ").style.display = "none";
+      document.getElementById("eightQ").style.display = "block";
+      document.getElementById("submit-btn").style.display = "none";
+      document.getElementById("dynamic").style.width = "70%";
+    }
+
+    function nextQuestion7() {
+      document.getElementById("firstQ").style.display = "none";
+      document.getElementById("btprev0").style.display = "none";
+      document.getElementById("btprev1").style.display = "none";
+      document.getElementById("btprev2").style.display = "none";
+      document.getElementById("btprev3").style.display = "none";
+      document.getElementById("btprev4").style.display = "none";
+      document.getElementById("btprev5").style.display = "none";
+      document.getElementById("btprev6").style.display = "none";
+      document.getElementById("btprev7").style.display = "inline-block";
+      document.getElementById("btprev8").style.display = "none";
+      document.getElementById("btnext0").style.display = "none";
+      document.getElementById("btnext1").style.display = "none";
+      document.getElementById("btnext2").style.display = "none";
+      document.getElementById("btnext3").style.display = "none";
+      document.getElementById("btnext4").style.display = "none";
+      document.getElementById("btnext5").style.display = "none";
+      document.getElementById("btnext6").style.display = "none";
+      document.getElementById("btnext7").style.display = "none";
+      document.getElementById("btnext8").style.display = "inline-block";
+      document.getElementById("btnext9").style.display = "none";
+      document.getElementById("secondQ").style.display = "none";
+      document.getElementById("thirdQ").style.display = "none";
+      document.getElementById("fourthQ").style.display = "none";
+      document.getElementById("fifthQ").style.display = "none";
+      document.getElementById("sixthQ").style.display = "none";
+      document.getElementById("seventhQ").style.display = "none";
+      document.getElementById("ninethQ").style.display = "block";
+      document.getElementById("tenthQ").style.display = "none";
+      document.getElementById("eightQ").style.display = "none";
+      document.getElementById("submit-btn").style.display = "none";
+      document.getElementById("dynamic").style.width = "80%";
+    }
+
+    function nextQuestion8() {
+      document.getElementById("firstQ").style.display = "none";
+      document.getElementById("btprev0").style.display = "none";
+      document.getElementById("btprev1").style.display = "none";
+      document.getElementById("btprev2").style.display = "none";
+      document.getElementById("btprev3").style.display = "none";
+      document.getElementById("btprev4").style.display = "none";
+      document.getElementById("btprev5").style.display = "none";
+      document.getElementById("btprev6").style.display = "none";
+      document.getElementById("btprev7").style.display = "none";
+      document.getElementById("btprev8").style.display = "inline-block";
+      document.getElementById("btnext0").style.display = "none";
+      document.getElementById("btnext1").style.display = "none";
+      document.getElementById("btnext2").style.display = "none";
+      document.getElementById("btnext3").style.display = "none";
+      document.getElementById("btnext4").style.display = "none";
+      document.getElementById("btnext5").style.display = "none";
+      document.getElementById("btnext6").style.display = "none";
+      document.getElementById("btnext7").style.display = "none";
+      document.getElementById("btnext8").style.display = "none";
+      document.getElementById("btnext9").style.display = "none";
+      document.getElementById("secondQ").style.display = "none";
+      document.getElementById("thirdQ").style.display = "none";
+      document.getElementById("fourthQ").style.display = "none";
+      document.getElementById("fifthQ").style.display = "none";
+      document.getElementById("sixthQ").style.display = "none";
+      document.getElementById("seventhQ").style.display = "none";
+      document.getElementById("ninethQ").style.display = "none";
+      document.getElementById("tenthQ").style.display = "block";
+      document.getElementById("eightQ").style.display = "none";
+      document.getElementById("submit-btn").style.display = "inline-block";
+      document.getElementById("dynamic").style.width = "90%";
+    }
+
+    function nextQuestion9() {
+      document.getElementById("firstQ").style.display = "none";
+      document.getElementById("btprev0").style.display = "none";
+      document.getElementById("btprev1").style.display = "none";
+      document.getElementById("btprev2").style.display = "none";
+      document.getElementById("btprev3").style.display = "none";
+      document.getElementById("btprev4").style.display = "none";
+      document.getElementById("btprev5").style.display = "none";
+      document.getElementById("btprev6").style.display = "none";
+      document.getElementById("btprev7").style.display = "none";
+      document.getElementById("btprev8").style.display = "inline-block";
+      document.getElementById("btnext0").style.display = "none";
+      document.getElementById("btnext1").style.display = "none";
+      document.getElementById("btnext2").style.display = "none";
+      document.getElementById("btnext3").style.display = "none";
+      document.getElementById("btnext4").style.display = "none";
+      document.getElementById("btnext5").style.display = "none";
+      document.getElementById("btnext6").style.display = "none";
+      document.getElementById("btnext7").style.display = "none";
+      document.getElementById("btnext8").style.display = "none";
+      document.getElementById("btnext9").style.display = "none";
+      document.getElementById("secondQ").style.display = "none";
+      document.getElementById("thirdQ").style.display = "none";
+      document.getElementById("fourthQ").style.display = "none";
+      document.getElementById("fifthQ").style.display = "none";
+      document.getElementById("sixthQ").style.display = "none";
+      document.getElementById("seventhQ").style.display = "none";
+      document.getElementById("ninethQ").style.display = "none";
+      document.getElementById("tenthQ").style.display = "none";
+      document.getElementById("eightQ").style.display = "none";
+      document.getElementById("submit-btn").style.display = "none";
+      document.getElementById("dynamic").style.width = "100%";
+    }
+    // Previous Buttons
+
+    function prevQuestion0() {
+      document.getElementById("btprev0").style.display = "none";
+      document.getElementById("btprev1").style.display = "none";
+      document.getElementById("btprev2").style.display = "none";
+      document.getElementById("btprev3").style.display = "none";
+      document.getElementById("btprev4").style.display = "none";
+      document.getElementById("btprev5").style.display = "none";
+      document.getElementById("btprev6").style.display = "none";
+      document.getElementById("btprev7").style.display = "none";
+      document.getElementById("btprev8").style.display = "none";
+      document.getElementById("btnext0").style.display = "inline-block";
+      document.getElementById("btnext1").style.display = "none";
+      document.getElementById("btnext2").style.display = "none";
+      document.getElementById("btnext3").style.display = "none";
+      document.getElementById("btnext4").style.display = "none";
+      document.getElementById("btnext5").style.display = "none";
+      document.getElementById("btnext6").style.display = "none";
+      document.getElementById("btnext7").style.display = "none";
+      document.getElementById("btnext8").style.display = "none";
+      document.getElementById("btnext9").style.display = "none";
+      document.getElementById("firstQ").style.display = "block";
+      document.getElementById("secondQ").style.display = "none";
+      document.getElementById("thirdQ").style.display = "none";
+      document.getElementById("fourthQ").style.display = "none";
+      document.getElementById("fifthQ").style.display = "none";
+      document.getElementById("sixthQ").style.display = "none";
+      document.getElementById("seventhQ").style.display = "none";
+      document.getElementById("eightQ").style.display = "none";
+      document.getElementById("ninethQ").style.display = "none";
+      document.getElementById("tenthQ").style.display = "none";
+      document.getElementById("dynamic").style.width = "1%";
+    }
+
+    function prevQuestion1() {
+      document.getElementById("btprev0").style.display = "inline-block";
+      document.getElementById("btprev1").style.display = "none";
+      document.getElementById("btprev2").style.display = "none";
+      document.getElementById("btprev3").style.display = "none";
+      document.getElementById("btprev4").style.display = "none";
+      document.getElementById("btprev5").style.display = "none";
+      document.getElementById("btprev6").style.display = "none";
+      document.getElementById("btprev7").style.display = "none";
+      document.getElementById("btprev8").style.display = "none";
+      document.getElementById("btnext0").style.display = "none";
+      document.getElementById("btnext1").style.display = "inline-block";
+      document.getElementById("btnext2").style.display = "none";
+      document.getElementById("btnext3").style.display = "none";
+      document.getElementById("btnext4").style.display = "none";
+      document.getElementById("btnext5").style.display = "none";
+      document.getElementById("btnext6").style.display = "none";
+      document.getElementById("btnext7").style.display = "none";
+      document.getElementById("btnext8").style.display = "none";
+      document.getElementById("btnext9").style.display = "none";
+      document.getElementById("firstQ").style.display = "none";
+      document.getElementById("secondQ").style.display = "block";
+      document.getElementById("thirdQ").style.display = "none";
+      document.getElementById("fourthQ").style.display = "none";
+      document.getElementById("fifthQ").style.display = "none";
+      document.getElementById("sixthQ").style.display = "none";
+      document.getElementById("seventhQ").style.display = "none";
+      document.getElementById("eightQ").style.display = "none";
+      document.getElementById("ninethQ").style.display = "none";
+      document.getElementById("tenthQ").style.display = "none";
+      document.getElementById("dynamic").style.width = "10%";
+    }
+
+    function prevQuestion2() {
+      document.getElementById("btprev0").style.display = "none";
+      document.getElementById("btprev1").style.display = "inline-block";
+      document.getElementById("btprev2").style.display = "none";
+      document.getElementById("btprev3").style.display = "none";
+      document.getElementById("btprev4").style.display = "none";
+      document.getElementById("btprev5").style.display = "none";
+      document.getElementById("btprev6").style.display = "none";
+      document.getElementById("btprev7").style.display = "none";
+      document.getElementById("btprev8").style.display = "none";
+      document.getElementById("btnext0").style.display = "none";
+      document.getElementById("btnext1").style.display = "none";
+      document.getElementById("btnext2").style.display = "inline-block";
+      document.getElementById("btnext3").style.display = "none";
+      document.getElementById("btnext4").style.display = "none";
+      document.getElementById("btnext5").style.display = "none";
+      document.getElementById("btnext6").style.display = "none";
+      document.getElementById("btnext7").style.display = "none";
+      document.getElementById("btnext8").style.display = "none";
+      document.getElementById("btnext9").style.display = "none";
+      document.getElementById("firstQ").style.display = "none";
+      document.getElementById("secondQ").style.display = "none";
+      document.getElementById("thirdQ").style.display = "block";
+      document.getElementById("fourthQ").style.display = "none";
+      document.getElementById("fifthQ").style.display = "none";
+      document.getElementById("sixthQ").style.display = "none";
+      document.getElementById("seventhQ").style.display = "none";
+      document.getElementById("submit-btn").style.display = "none";
+      document.getElementById("eightQ").style.display = "none";
+      document.getElementById("ninethQ").style.display = "none";
+      document.getElementById("tenthQ").style.display = "none";
+      document.getElementById("dynamic").style.width = "20%";
+    }
+
+    function prevQuestion3() {
+      document.getElementById("btprev0").style.display = "none";
+      document.getElementById("btprev1").style.display = "none";
+      document.getElementById("btprev2").style.display = "inline-block";
+      document.getElementById("btprev3").style.display = "none";
+      document.getElementById("btprev4").style.display = "none";
+      document.getElementById("btprev5").style.display = "none";
+      document.getElementById("btnext0").style.display = "none";
+      document.getElementById("btprev6").style.display = "none";
+      document.getElementById("btprev7").style.display = "none";
+      document.getElementById("btprev8").style.display = "none";
+      document.getElementById("btnext1").style.display = "none";
+      document.getElementById("btnext2").style.display = "none";
+      document.getElementById("btnext3").style.display = "inline-block";
+      document.getElementById("btnext4").style.display = "none";
+      document.getElementById("btnext5").style.display = "none";
+      document.getElementById("btnext6").style.display = "none";
+      document.getElementById("btnext7").style.display = "none";
+      document.getElementById("btnext8").style.display = "none";
+      document.getElementById("btnext9").style.display = "none";
+      document.getElementById("firstQ").style.display = "none";
+      document.getElementById("secondQ").style.display = "none";
+      document.getElementById("thirdQ").style.display = "none";
+      document.getElementById("fourthQ").style.display = "block";
+      document.getElementById("fifthQ").style.display = "none";
+      document.getElementById("sixthQ").style.display = "none";
+      document.getElementById("seventhQ").style.display = "none";
+      document.getElementById("submit-btn").style.display = "none";
+      document.getElementById("eightQ").style.display = "none";
+      document.getElementById("ninethQ").style.display = "none";
+      document.getElementById("tenthQ").style.display = "none";
+      document.getElementById("dynamic").style.width = "30%";
+    }
+
+    function prevQuestion4() {
+      document.getElementById("btprev0").style.display = "none";
+      document.getElementById("btprev1").style.display = "none";
+      document.getElementById("btprev2").style.display = "none";
+      document.getElementById("btprev3").style.display = "inline-block";
+      document.getElementById("btprev4").style.display = "none";
+      document.getElementById("btprev5").style.display = "none";
+      document.getElementById("btnext0").style.display = "none";
+      document.getElementById("btprev6").style.display = "none";
+      document.getElementById("btprev7").style.display = "none";
+      document.getElementById("btprev8").style.display = "none";
+      document.getElementById("btnext1").style.display = "none";
+      document.getElementById("btnext2").style.display = "none";
+      document.getElementById("btnext3").style.display = "none";
+      document.getElementById("btnext4").style.display = "inline-block";
+      document.getElementById("btnext5").style.display = "none";
+      document.getElementById("btnext6").style.display = "none";
+      document.getElementById("btnext7").style.display = "none";
+      document.getElementById("btnext8").style.display = "none";
+      document.getElementById("btnext9").style.display = "none";
+      document.getElementById("firstQ").style.display = "none";
+      document.getElementById("secondQ").style.display = "none";
+      document.getElementById("thirdQ").style.display = "none";
+      document.getElementById("fourthQ").style.display = "none";
+      document.getElementById("fifthQ").style.display = "block";
+      document.getElementById("sixthQ").style.display = "none";
+      document.getElementById("seventhQ").style.display = "none";
+      document.getElementById("submit-btn").style.display = "none";
+      document.getElementById("eightQ").style.display = "none";
+      document.getElementById("ninethQ").style.display = "none";
+      document.getElementById("tenthQ").style.display = "none";
+      document.getElementById("dynamic").style.width = "40%";
+    }
+
+    function prevQuestion5() {
+      document.getElementById("btprev0").style.display = "none";
+      document.getElementById("btprev1").style.display = "none";
+      document.getElementById("btprev2").style.display = "none";
+      document.getElementById("btprev3").style.display = "none";
+      document.getElementById("btprev4").style.display = "inline-block";
+      document.getElementById("btprev5").style.display = "none";
+      document.getElementById("btprev6").style.display = "none";
+      document.getElementById("btprev7").style.display = "none";
+      document.getElementById("btprev8").style.display = "none";
+      document.getElementById("btnext0").style.display = "none";
+      document.getElementById("btnext1").style.display = "none";
+      document.getElementById("btnext2").style.display = "none";
+      document.getElementById("btnext3").style.display = "none";
+      document.getElementById("btnext4").style.display = "none";
+      document.getElementById("btnext5").style.display = "inline-block";
+      document.getElementById("btnext6").style.display = "none";
+      document.getElementById("btnext7").style.display = "none";
+      document.getElementById("btnext8").style.display = "none";
+      document.getElementById("btnext9").style.display = "none";
+      document.getElementById("firstQ").style.display = "none";
+      document.getElementById("secondQ").style.display = "none";
+      document.getElementById("thirdQ").style.display = "none";
+      document.getElementById("fourthQ").style.display = "none";
+      document.getElementById("fifthQ").style.display = "none";
+      document.getElementById("sixthQ").style.display = "block";
+      document.getElementById("seventhQ").style.display = "none";
+      document.getElementById("submit-btn").style.display = "none";
+      document.getElementById("eightQ").style.display = "none";
+      document.getElementById("ninethQ").style.display = "none";
+      document.getElementById("tenthQ").style.display = "none";
+      document.getElementById("dynamic").style.width = "50%";
+    }
+
+    function prevQuestion6() {
+      document.getElementById("btprev0").style.display = "none";
+      document.getElementById("btprev1").style.display = "none";
+      document.getElementById("btprev2").style.display = "none";
+      document.getElementById("btprev3").style.display = "none";
+      document.getElementById("btprev4").style.display = "none";
+      document.getElementById("btprev5").style.display = "inline-block";
+      document.getElementById("btprev6").style.display = "none";
+      document.getElementById("btprev7").style.display = "none";
+      document.getElementById("btprev8").style.display = "none";
+      document.getElementById("btnext0").style.display = "none";
+      document.getElementById("btnext1").style.display = "none";
+      document.getElementById("btnext2").style.display = "none";
+      document.getElementById("btnext3").style.display = "none";
+      document.getElementById("btnext4").style.display = "none";
+      document.getElementById("btnext5").style.display = "none";
+      document.getElementById("btnext6").style.display = "inline-block";
+      document.getElementById("btnext7").style.display = "none";
+      document.getElementById("btnext8").style.display = "none";
+      document.getElementById("btnext9").style.display = "none";
+      document.getElementById("firstQ").style.display = "none";
+      document.getElementById("secondQ").style.display = "none";
+      document.getElementById("thirdQ").style.display = "none";
+      document.getElementById("fourthQ").style.display = "none";
+      document.getElementById("fifthQ").style.display = "none";
+      document.getElementById("sixthQ").style.display = "none";
+      document.getElementById("seventhQ").style.display = "block";
+      document.getElementById("submit-btn").style.display = "none";
+      document.getElementById("eightQ").style.display = "none";
+      document.getElementById("ninethQ").style.display = "none";
+      document.getElementById("tenthQ").style.display = "none";
+      document.getElementById("dynamic").style.width = "60%";
+    }
+    function prevQuestion7() {
+      document.getElementById("btprev0").style.display = "none";
+      document.getElementById("btprev1").style.display = "none";
+      document.getElementById("btprev2").style.display = "none";
+      document.getElementById("btprev3").style.display = "none";
+      document.getElementById("btprev4").style.display = "none";
+      document.getElementById("btprev5").style.display = "none";
+      document.getElementById("btprev6").style.display = "inline-block";
+      document.getElementById("btprev7").style.display = "none";
+      document.getElementById("btprev8").style.display = "none";
+      document.getElementById("btnext0").style.display = "none";
+      document.getElementById("btnext1").style.display = "none";
+      document.getElementById("btnext2").style.display = "none";
+      document.getElementById("btnext3").style.display = "none";
+      document.getElementById("btnext4").style.display = "none";
+      document.getElementById("btnext5").style.display = "none";
+      document.getElementById("btnext6").style.display = "none";
+      document.getElementById("btnext7").style.display = "inline-block";
+      document.getElementById("btnext8").style.display = "none";
+      document.getElementById("btnext9").style.display = "none";
+      document.getElementById("firstQ").style.display = "none";
+      document.getElementById("secondQ").style.display = "none";
+      document.getElementById("thirdQ").style.display = "none";
+      document.getElementById("fourthQ").style.display = "none";
+      document.getElementById("fifthQ").style.display = "none";
+      document.getElementById("sixthQ").style.display = "none";
+      document.getElementById("seventhQ").style.display = "none";
+      document.getElementById("submit-btn").style.display = "none";
+      document.getElementById("eightQ").style.display = "block";
+      document.getElementById("ninethQ").style.display = "none";
+      document.getElementById("tenthQ").style.display = "none";
+      document.getElementById("dynamic").style.width = "70%";
+    }
+    function prevQuestion8() {
+      document.getElementById("btprev0").style.display = "none";
+      document.getElementById("btprev1").style.display = "none";
+      document.getElementById("btprev2").style.display = "none";
+      document.getElementById("btprev3").style.display = "none";
+      document.getElementById("btprev4").style.display = "none";
+      document.getElementById("btprev5").style.display = "none";
+      document.getElementById("btprev6").style.display = "none";
+      document.getElementById("btprev7").style.display = "inline-block";
+      document.getElementById("btprev8").style.display = "none";
+      document.getElementById("btnext0").style.display = "none";
+      document.getElementById("btnext1").style.display = "none";
+      document.getElementById("btnext2").style.display = "none";
+      document.getElementById("btnext3").style.display = "none";
+      document.getElementById("btnext4").style.display = "none";
+      document.getElementById("btnext5").style.display = "none";
+      document.getElementById("btnext6").style.display = "none";
+      document.getElementById("btnext7").style.display = "none";
+      document.getElementById("btnext8").style.display = "inline-block";
+      document.getElementById("btnext9").style.display = "none";
+      document.getElementById("firstQ").style.display = "none";
+      document.getElementById("secondQ").style.display = "none";
+      document.getElementById("thirdQ").style.display = "none";
+      document.getElementById("fourthQ").style.display = "none";
+      document.getElementById("fifthQ").style.display = "none";
+      document.getElementById("sixthQ").style.display = "none";
+      document.getElementById("seventhQ").style.display = "none";
+      document.getElementById("submit-btn").style.display = "none";
+      document.getElementById("eightQ").style.display = "none";
+      document.getElementById("ninethQ").style.display = "block";
+      document.getElementById("tenthQ").style.display = "none";
+      document.getElementById("dynamic").style.width = "80%";
+    }
+
+    function manage(txt) {
+      var btn = document.getElementById("validate");
+      if (txt.value.includes("@")) {
+        btn.disabled = false;
+      } else {
+        btn.disabled = true;
+      }
+    }
+  </script>
+</div>
